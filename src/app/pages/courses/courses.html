@@ -1,0 +1,27 @@
+<h2 class="title">Explore Our Courses</h2>
+<p class="subtitle">Discover our comprehensive and engaging courses designed to boost your skills.</p>
+
+<!-- Category Tabs -->
+<div class="tabs">
+  <button *ngFor="let category of categories"
+          (click)="selectedCategory = category"
+          [class.active]="selectedCategory === category">
+    {{ category }}
+  </button>
+</div>
+
+<!-- Search & Toggle -->
+<div class="search-filter">
+  <input type="text" class="form-control mx-1 px-4 w-25 " [(ngModel)]="searchTerm" placeholder="Search by title or description…" />
+  <label><input type="checkbox" class="text-center my-3" [(ngModel)]="showAvailableTests" /> Show Available Tests</label>
+</div>
+
+<!-- Cards -->
+<div class="card-grid">
+  <div *ngFor="let course of filteredCourses" class="course-card">
+    <h3>{{ course.title }}</h3>
+    <p>{{ course.description }}</p>
+    <p><strong>{{ course.questions }} questions</strong> to evaluate your knowledge.</p>
+    <button class="test-button" [disabled]="!course.availableTest">Start a Test</button>
+  </div>
+</div>

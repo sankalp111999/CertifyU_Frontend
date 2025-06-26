@@ -1,0 +1,65 @@
+.exam-wrapper {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+  background-color: #007bff;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85em;
+  text-align: center;
+
+}
+
+.completed {
+  background-color: #28a745;
+}
+
+.progress {
+  background-color: #f39c12;
+  padding: 13px;
+  align-items: center;
+}
+
+.view-btn, .resume-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.view-btn {
+  background-color: #3b6fc1;
+  color: white;
+}
+
+.resume-btn {
+  background-color: #28a745;
+  color: white;
+}

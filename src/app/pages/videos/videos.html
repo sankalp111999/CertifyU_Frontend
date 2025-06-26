@@ -1,0 +1,18 @@
+<div class="container py-4">
+  <input type="text" class="form-control mb-4" placeholder="Search videos..." [(ngModel)]="searchTerm" />
+
+  <div class="row g-4">
+    <div class="col-md-3" *ngFor="let video of filteredVideos">
+      <div class="card h-100 video-card shadow-sm card-hover">
+        <a [href]="video.url" target="_blank">
+          <!--<img [src]="video.img" class="card-img-top" alt="video thumbnail">-->
+        </a>
+        <div class="card-body">
+          <a [href]="video.url" target="_blank" class="card-title fw-semibold text-decoration-none d-block text-dark hover-title">
+            {{ video.title }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+.social-media a {
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.social-media a:hover {
+  color: rgb(241, 255, 255);
+}

@@ -1,0 +1,16 @@
+.hero-section {
+  background: linear-gradient(to bottom right, #d518ff, #2a0064);
+  min-height: 300px;
+}
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform, box-shadow;
+  border-radius: 12px;
+}
+
+.card-hover:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}

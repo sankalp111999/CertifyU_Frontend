@@ -1,0 +1,36 @@
+<div class="exam-wrapper">
+  <h2>User Exams</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Started On</th>
+        <th>Finished On</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let exam of userExams">
+        <td>{{ exam.title }}</td>
+        <td>{{ exam.description }}</td>
+        <td>
+          <span class="badge"
+                [ngClass]="{
+                  'completed': exam.status === 'Completed',
+                  'progress': exam.status === 'In Progress'
+                }">
+            {{ exam.status }}
+          </span>
+        </td>
+        <td>{{ exam.startedOn }}</td>
+        <td>{{ exam.finishedOn }}</td>
+        <td>
+          <button *ngIf="exam.status === 'Completed'" class="view-btn">View Details</button>
+          <button *ngIf="exam.status === 'In Progress'" class="resume-btn">Resume</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
